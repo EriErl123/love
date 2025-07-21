@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Just For You ❤️</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Playfair+Display:wght@700&family=Caveat:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FEF2F2; /* A very light pink background */
+        }
+        .font-playfair {
+            font-family: 'Playfair Display', serif;
+        }
+        .font-caveat {
+            font-family: 'Caveat', cursive;
+        }
+        /* Loading Spinner Animation */
+        .loader {
+            border-top-color: #F472B6; /* Pink */
+            -webkit-animation: spinner 1.5s linear infinite;
+            animation: spinner 1.5s linear infinite;
+        }
+        @-webkit-keyframes spinner {
+            0% { -webkit-transform: rotate(0deg); }
+            100% { -webkit-transform: rotate(360deg); }
+        }
+        @keyframes spinner {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        /* Polaroid effect */
+        .polaroid {
+            background: white;
+            padding: 1rem;
+            padding-bottom: 2.5rem;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transform: rotate(-2deg);
+            transition: all 0.3s ease-in-out;
+        }
+        .polaroid:hover {
+            transform: rotate(2deg) scale(1.05);
+            z-index: 10;
+        }
+        .polaroid:nth-child(2n) {
+            transform: rotate(2deg);
+        }
+         .polaroid:nth-child(2n):hover {
+            transform: rotate(-2deg) scale(1.05);
+        }
+        /* Accordion for reasons list */
+        .reason-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="fixed inset-0 bg-pink-100 flex flex-col justify-center items-center z-50 transition-opacity duration-1000">
+        <div class="loader ease-linear rounded-full border-8 border-t-8 border-gray-200 h-24 w-24 mb-4"></div>
+        <p class="font-playfair text-xl text-pink-500">Preparing your surprise...</p>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content" class="opacity-0 transition-opacity duration-1000">
+        <div class="container mx-auto px-4 py-8 md:py-16 max-w-4xl">
+
+            <!-- Header Section -->
+            <header class="text-center mb-16">
+                <h1 class="font-playfair text-4xl md:text-6xl text-pink-500 mb-2">Happy Monthsary, My Love</h1>
+                <p class="text-lg text-gray-600">I made a little something for you...</p>
+            </header>
+
+            <!-- Letter Section -->
+            <section class="bg-white rounded-lg shadow-lg p-6 md:p-10 mb-16">
+                <h2 class="font-playfair text-3xl text-pink-500 mb-4">To my favorite headache...</h2>
+                <div class="text-gray-700 space-y-4 leading-relaxed">
+                    <p>
+                        I'm not even gonna lie, sometimes you drive me absolutely crazy. You know exactly how to be the biggest pain, how to be so stubborn, and how to win every single argument even when you're not right (which is most of the time, by the way 😠). You test my patience in ways I never knew were possible.
+                    </p>
+                    <p>
+                        But then, I have to be honest with myself. After all the teasing and the little fights, you're still the only person I want to talk to at the end of the day. All that chaos with you is so much better than peace and quiet without you. You'll do that one cute thing you do, and suddenly I can't even remember why I was annoyed. It's so unfair.
+                    </p>
+                    <p>
+                        Thank you for sticking with me. For real. Thank you for choosing to be by my side, even when I'm being a handful myself. Thank you for being my best friend and my partner in crime. Life with you is this weird, messy, beautiful adventure, and I wouldn't trade it for anything.
+                    </p>
+                    <p class="font-bold text-pink-600">
+                        I love you wholeheartedly, pasaway ka. Always.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Reasons I Love You Section -->
+            <section class="mb-16">
+                <h2 class="font-playfair text-3xl text-center text-pink-500 mb-8">A few reasons why you're stuck with me...</h2>
+                <div class="space-y-4 max-w-2xl mx-auto">
+                    <!-- Reason 1 -->
+                    <div class="reason-item bg-white rounded-lg shadow">
+                        <button class="reason-title w-full text-left p-4 font-bold text-lg text-pink-500 flex justify-between items-center">
+                            <span>Because you're my biggest cheerleader.</span>
+                            <span class="transform transition-transform duration-300">&#9662;</span>
+                        </button>
+                        <div class="reason-content px-4 pb-4 text-gray-600">
+                            <p>You believe in me even when I don't believe in myself. That means everything.</p>
+                        </div>
+                    </div>
+                    <!-- Reason 2 -->
+                    <div class="reason-item bg-white rounded-lg shadow">
+                        <button class="reason-title w-full text-left p-4 font-bold text-lg text-pink-500 flex justify-between items-center">
+                            <span>Because of the way you laugh.</span>
+                             <span class="transform transition-transform duration-300">&#9662;</span>
+                        </button>
+                        <div class="reason-content px-4 pb-4 text-gray-600">
+                            <p>No, seriously. It's the best sound in the world. Especially when it's my joke that made you laugh.</p>
+                        </div>
+                    </div>
+                    <!-- Reason 3 -->
+                    <div class="reason-item bg-white rounded-lg shadow">
+                         <button class="reason-title w-full text-left p-4 font-bold text-lg text-pink-500 flex justify-between items-center">
+                            <span>Because you're smart (even when you're annoying).</span>
+                             <span class="transform transition-transform duration-300">&#9662;</span>
+                        </button>
+                        <div class="reason-content px-4 pb-4 text-gray-600">
+                            <p>I learn so much from you, and I love that we can talk about anything and everything.</p>
+                        </div>
+                    </div>
+                     <!-- Reason 4 -->
+                    <div class="reason-item bg-white rounded-lg shadow">
+                         <button class="reason-title w-full text-left p-4 font-bold text-lg text-pink-500 flex justify-between items-center">
+                            <span>Because you feel like home.</span>
+                             <span class="transform transition-transform duration-300">&#9662;</span>
+                        </button>
+                        <div class="reason-content px-4 pb-4 text-gray-600">
+                            <p>With you, I can be 100% myself, no filters needed. That's the best feeling ever.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Photo Gallery Section -->
+            <section class="mb-16">
+                 <h2 class="font-playfair text-3xl text-center text-pink-500 mb-8">A walk down memory lane...</h2>
+                 <div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
+                    <!-- Replace these with your own images! -->
+                    <div class="polaroid">
+                        <img src="beg.jpg" alt="Our first picture" class="w-full h-auto">
+                        <p class="font-caveat text-xl text-center mt-2">The beginning!</p>
+                    </div>
+                     <div class="polaroid">
+                        <img src="silly.jpg" alt="Silly face picture" class="w-full h-auto">
+                        <p class="font-caveat text-xl text-center mt-2">My favorite clown.</p>
+                    </div>
+                     <div class="polaroid">
+                        <img src="mem.jpg" alt="Favorite memory" class="w-full h-auto">
+                        <p class="font-caveat text-xl text-center mt-2">This perfect day.</p>
+                    </div>
+                     <div class="polaroid">
+                        <img src="/food.jpg" alt="Food trip" class="w-full h-auto">
+                        <p class="font-caveat text-xl text-center mt-2">Kain buddy 4ever.</p>
+                    </div>
+                     <div class="polaroid">
+                        <img src="/angle.jpg" alt="Her best angle" class="w-full h-auto">
+                        <p class="font-caveat text-xl text-center mt-2">So pretty 😍</p>
+                    </div>
+                     <div class="polaroid">
+                        <img src="/more.jpg" alt="Add more photos" class="w-full h-auto">
+                        <p class="font-caveat text-xl text-center mt-2">Many more to come!</p>
+                    </div>
+                 </div>
+            </section>
+            
+            <!-- A Special Picture Section -->
+            <section class="mb-16">
+                <h2 class="font-playfair text-3xl text-center text-pink-500 mb-8">And a little something that reminded me of you...</h2>
+                <div class="max-w-md mx-auto bg-white rounded-lg shadow-lg p-4">
+                    <!-- 
+                        How to add your picture:
+                        1. Go to the pin on Pinterest.
+                        2. Right-click on the image.
+                        3. Click "Copy Image Address".
+                        4. Paste the link you copied into the src="..." below, replacing the placeholder link.
+                    -->
+                    <img src="https://i.pinimg.com/736x/ac/4a/2a/ac4a2a588837125a08e75be3827c95a8.jpg" alt="A special picture for you" class="rounded-md w-full">
+                </div>
+            </section>
+
+
+            <!-- Footer -->
+            <footer class="text-center">
+                 <p class="text-2xl font-bold text-pink-600">Cheers to another month, and to many more.</p>
+                 <p class="text-lg text-gray-600 mt-2">I love you more than words can say.</p>
+            </footer>
+
+        </div>
+    </div>
+
+    <script>
+        // --- Loading Screen Logic ---
+        window.addEventListener('load', () => {
+            const loadingScreen = document.getElementById('loading-screen');
+            const mainContent = document.getElementById('main-content');
+
+            setTimeout(() => {
+                loadingScreen.style.opacity = '0';
+                // Hide it after transition
+                setTimeout(() => {
+                    loadingScreen.style.display = 'none';
+                }, 1000); 
+                
+                mainContent.style.opacity = '1';
+            }, 2000); // 2-second loading screen
+        });
+
+        // --- Accordion Logic for "Reasons" ---
+        const reasonItems = document.querySelectorAll('.reason-item');
+
+        reasonItems.forEach(item => {
+            const title = item.querySelector('.reason-title');
+            const content = item.querySelector('.reason-content');
+            const arrow = title.querySelector('span:last-child');
+
+            title.addEventListener('click', () => {
+                // Close other open items
+                reasonItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.querySelector('.reason-content').style.maxHeight = null;
+                        otherItem.querySelector('.reason-title span:last-child').style.transform = 'rotate(0deg)';
+                    }
+                });
+
+                // Toggle current item
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                    arrow.style.transform = 'rotate(0deg)';
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                    arrow.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
